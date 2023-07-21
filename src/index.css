@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Aleo:wght@500&family=Dancing+Script:wght@400;500;600;700&family=Montserrat:wght@200;400&family=Roboto+Slab&display=swap');
+
+body {
+  margin: 0;
+  background-color: #f5f6fa;
+}
+
+.top-container {
+  width: 87.5rem;
+  height: auto;
+  margin: 9.313rem 6.25rem;
+  padding-bottom: 10rem;
+  border-radius: 4px;
+  box-shadow: 0 0 60px 0 black;
+  background-color: white;
+}
+
+.Bookstore-CMS,
+.nav-container li,
+.genres,
+.percent,
+.complete,
+form h4,
+.Cat-description h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.title,
+.author,
+.comRemEdit p,
+.current-chapter,
+.current-lesson,
+.update-progress,
+.Cat-description p,
+.lists-genere,
+.lists-genere p {
+  font-family: 'Roboto Slab', serif;
+}
+
+.Bookstore-CMS,
+.nav-container li,
+.genres,
+.title,
+.author,
+.comRemEdit p,
+.percent,
+.complete,
+.current-chapter,
+.current-lesson,
+.update-progress,
+form h4,
+.Cat-description h3,
+.Cat-description p,
+.lists-genere,
+.lists-genere p {
+  font-weight: bold;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+}
+
+/* Styling for nav section  */
+.nav {
+  height: 5rem;
+  margin: 0 0 2.375rem;
+  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  background-color: whitesmoke;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+}
+
+.Bookstore-CMS {
+  width: 15rem;
+  height: 2.313rem;
+  margin: 0.375rem 2.938rem 0.125rem 0;
+  font-size: 1.875rem;
+  color: #0290ff;
+}
+
+.nav-container {
+  display: flex;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #121212;
+}
+
+.nav-container li {
+  width: 3.688rem;
+  height: 1rem;
+  margin: 1.125rem 2.563rem 0.688rem 0;
+  font-size: 0.813rem;
+  letter-spacing: 1.9px;
+}
+
+.Mask {
+  margin-top: 1rem;
+  padding-top: 1.25rem;
+  height: 21px;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  color: #0290ff;
+  border: 1px solid rgb(213, 204, 204);
+  border-radius: 15em;
+}
+
+/* Styling for nav section  */
+
+/* Styling for the Home component */
+.bookcard-container {
+  margin: 2.375rem 6.25rem 0.938rem 6.25rem;
+}
+
+.Book-Card {
+  display: flex;
+  justify-content: space-between;
+  height: 9.625rem;
+  padding: 2rem 1.688rem 1.625rem 1.688rem;
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  border: solid 1px #e8e8e8;
+  background-color: rgb(239, 239, 239);
+}
+
+.title-section {
+  width: 23rem;
+}
+
+.genres {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.title {
+  margin: 0.188rem 0 0 0;
+  font-size: 1.375rem;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.author {
+  margin: 0.25rem 0 0 0;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: #4386bf;
+}
+
+.comRemEdit {
+  display: flex;
+}
+
+.comRemEdit p {
+  margin: 1.4rem 1rem 2rem 0;
+  font-size: 0.875rem;
+  font-weight: 300;
+  color: #4386bf;
+}
+
+.up-bar {
+  margin-top: 1.4rem;
+  margin-right: 1rem;
+  font-size: 17px;
+  color: #c9baba;
+}
+
+.stat-section {
+  display: flex;
+  margin-top: 2.5rem;
+}
+
+.circle-container {
+  width: 80px;
+  height: 80px;
+  background: #e1e1e1;
+  border-radius: 50%;
+}
+
+.circle-container .circle .item,
+.circle-container .circle .fill {
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.circle-container .circle .item {
+  clip: rect(0, 100px, 100px, 44px);
+}
+
+.circle-container .circle .item.layer-1,
+.circle-container .circle .fill {
+  transform: rotate(126deg);
+  animation: fill ease-in-out 3s;
+}
+
+.circle-container .circle .item .fill {
+  clip: rect(0, 44px, 150px, 0);
+  background-color: #2892d7;
+}
+
+@keyframes fill {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(126deg);
+  }
+}
+
+.circle-container .circle .itm-lay-1,
+.circle-container .circle .fill-1 {
+  transform: rotate(8deg);
+  animation: fill ease-in-out 3s;
+}
+
+@keyframes fill-1 {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(8deg);
+  }
+}
+
+.inside-content {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #eef3f0;
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+}
+
+.percent-complete {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.3rem;
+}
+
+.percent {
+  font-size: 2rem;
+  color: #121212;
+}
+
+.complete {
+  opacity: 0.5;
+  font-size: 0.875rem;
+  color: #121212;
+}
+
+.update-section {
+  display: flex;
+  flex-direction: column;
+  margin-right: 4rem;
+  margin-top: 1rem;
+}
+
+.current-chapter {
+  margin: 0.063rem 0 0.4rem 0;
+  opacity: 0.5;
+  font-size: 0.813rem;
+  font-weight: 300;
+  color: #121212;
+}
+
+.current-lesson {
+  margin: 0.438rem 0 1.438rem 0;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: -0.4px;
+  color: #121212;
+}
+
+.update-progress {
+  width: 11rem;
+  height: 2.125rem;
+  font-size: 0.813rem;
+  font-weight: 400;
+  border: none;
+  letter-spacing: 0.5px;
+  text-align: center;
+  color: white;
+  background-color: #0290ff;
+}
+
+.hr-line {
+  margin-top: 2.5rem;
+  color: #e8e8e8;
+}
+
+form h4 {
+  margin-top: 1.813rem;
+  margin-bottom: 1.188rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #888;
+}
+
+.booktitle-inp {
+  width: 20rem;
+  margin: 0 2.125rem 0 0;
+  padding: 1.25rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #f5f5f5;
+  background-color: rgb(239, 239, 239);
+}
+
+.catagory-inp,
+.author-inp {
+  width: 15rem;
+  margin: 0 2.125rem 0 0;
+  padding: 1.25rem 1.063rem;
+  border-radius: 4px;
+  border: solid 1px #f5f5f5;
+  background-color: rgb(239, 239, 239);
+}
+
+.submit-btn {
+  width: 9.5rem;
+  height: 2.813rem;
+  margin: 1.188rem 0 0 2.125rem;
+  border-radius: 3px;
+  border: none;
+  background-color: #0290ff;
+  color: white;
+}
+
+/* Styling for the Home component */
+
+/* Styling for Catagorie component */
+.Catagorie-Container {
+  background-color: #a5cef1;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+}
+
+.bookCat {
+  width: 20%;
+  margin-left: 40%;
+  margin-top: 2rem;
+}
+
+.Cat-description h3 {
+  margin-top: 1.813rem;
+  margin-left: 2rem;
+  margin-bottom: 1.188rem;
+  font-size: 2.25rem;
+  font-weight: bold;
+  letter-spacing: -0.18px;
+  color: #151515;
+}
+
+.Cat-description p {
+  margin-left: 4rem;
+  margin-right: 4rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #7f7a7a;
+}
+
+.lists-genere {
+  margin: 1rem 4rem 1rem 4rem;
+  padding: 0 2rem 0 2rem;
+  border-radius: 4px;
+  background-color: #83bdd8;
+  font-size: 1.375rem;
+  font-weight: bold;
+  letter-spacing: -0.2px;
+  color: #121212;
+}
+
+.Star {
+  display: flex;
+}
+
+.fa-star {
+  margin-top: 2rem;
+  margin-right: 10px;
+  color: #d4b411;
+}
+
+.lists-genere p {
+  margin: 0;
+  padding: 0;
+  padding-bottom: 2rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #686464;
+}
+
+/* Styling for Catagorie component */
