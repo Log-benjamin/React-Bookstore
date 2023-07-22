@@ -63,7 +63,7 @@ form h4,
 .nav {
   height: 5rem;
   margin: 0 0 2.375rem;
-  padding: 1.438rem 6.188rem 1.688rem 6.25rem;
+  padding: 1.438rem 5% 1.688rem 5%;
   background-color: whitesmoke;
   display: flex;
   align-content: center;
@@ -71,9 +71,7 @@ form h4,
 }
 
 .Bookstore-CMS {
-  width: 15rem;
-  height: 2.313rem;
-  margin: 0.375rem 2.938rem 0.125rem 0;
+  margin: 0.375rem 2rem 0.125rem 0;
   font-size: 1.875rem;
   color: #0290ff;
 }
@@ -89,10 +87,8 @@ a {
 }
 
 .nav-container li {
-  width: 3.688rem;
-  height: 1rem;
-  margin: 1.125rem 2.563rem 0.688rem 0;
-  font-size: 0.813rem;
+  margin: 1.125rem 2.5rem 0.688rem 0;
+  font-size: 0.9rem;
   letter-spacing: 1.9px;
 }
 
@@ -111,14 +107,14 @@ a {
 
 /* Styling for the Home component */
 .bookcard-container {
-  margin: 2.375rem 6.25rem 0.938rem 6.25rem;
+  margin: 2.375rem 5% 0.938rem 5%;
 }
 
 .Book-Card {
   display: flex;
   justify-content: space-between;
   height: 9.625rem;
-  padding: 2rem 1.688rem 1.625rem 1.688rem;
+  padding: 2rem 1% 1.625rem 1%;
   margin-bottom: 1rem;
   border-radius: 4px;
   border: solid 1px #e8e8e8;
@@ -305,8 +301,8 @@ form h4 {
 }
 
 .booktitle-inp {
-  width: 17rem;
-  margin: 0 2.125rem 0 0;
+  width: 27%;
+  margin: 0 1rem 0 0;
   padding: 1.25rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #f5f5f5;
@@ -315,8 +311,8 @@ form h4 {
 
 .catagory-inp,
 .author-inp {
-  width: 14rem;
-  margin: 0 2.125rem 0 0;
+  width: 20%;
+  margin: 0 1rem 0 0;
   padding: 1.25rem 1.063rem;
   border-radius: 4px;
   border: solid 1px #f5f5f5;
@@ -324,9 +320,9 @@ form h4 {
 }
 
 .submit-btn {
-  width: 9.5rem;
+  width: 15%;
   height: 2.813rem;
-  margin: 1.188rem 0 0 46.125rem;
+  margin: 1.188rem 0 0;
   border-radius: 3px;
   border: none;
   background-color: #0290ff;

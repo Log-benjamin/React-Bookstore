@@ -40,19 +40,6 @@ export default function Catagories() {
       <div className="lists-genere">
         <div className="Star">
           <i className="fa-solid fa-star" />
-          <h4>Classics</h4>
-        </div>
-        <p>
-          You may think of these books as the throwback readings you were assigned in English class.
-          (Looking at you, Charles Dickens.) The classics have been around for decades, and were
-          often groundbreaking stories at their publish time, but have continued to be impactful for
-          generations, serving as the foundation for many popular works we read today.
-        </p>
-      </div>
-      {/* separate lists */}
-      <div className="lists-genere">
-        <div className="Star">
-          <i className="fa-solid fa-star" />
           <h4>Comic Book or Graphic Novel </h4>
         </div>
         <p>
