@@ -6,9 +6,8 @@ body {
 }
 
 .top-container {
-  width: 87.5rem;
   height: auto;
-  margin: 9.313rem 6.25rem;
+  margin: 9.313rem 5%;
   padding-bottom: 10rem;
   border-radius: 4px;
   box-shadow: 0 0 60px 0 black;
@@ -306,7 +305,7 @@ form h4 {
 }
 
 .booktitle-inp {
-  width: 20rem;
+  width: 17rem;
   margin: 0 2.125rem 0 0;
   padding: 1.25rem 1.063rem;
   border-radius: 4px;
@@ -316,7 +315,7 @@ form h4 {
 
 .catagory-inp,
 .author-inp {
-  width: 15rem;
+  width: 14rem;
   margin: 0 2.125rem 0 0;
   padding: 1.25rem 1.063rem;
   border-radius: 4px;
@@ -327,7 +326,7 @@ form h4 {
 .submit-btn {
   width: 9.5rem;
   height: 2.813rem;
-  margin: 1.188rem 0 0 2.125rem;
+  margin: 1.188rem 0 0 46.125rem;
   border-radius: 3px;
   border: none;
   background-color: #0290ff;
