@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
+import Button from './Button';
 
 const Book = ({
-  genres, title, author, itemLayer, filldata, percentage, chapter, circle,
+  genres, title, author, itemLayer, filldata, percentage, chapter, circle, onRemove,
 }) => (
   <div className="Book-Card">
     <div className="title-section">
@@ -12,7 +13,7 @@ const Book = ({
       <div className="comRemEdit">
         <p className="comment-btn">Comments</p>
         <span className="up-bar">|</span>
-        <p className="remove-btn">Remove</p>
+        <Button classN="remove-btn" label="Remove" onClick={onRemove} />
         <span className="up-bar">|</span>
         <p className="edit-btn">Edit</p>
       </div>
