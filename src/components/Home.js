@@ -1,14 +1,40 @@
+import { useDispatch, useSelector } from 'react-redux';
 import AddBook from './AddBook';
 import Book from './Books';
+import { addBook, removeBook } from '../redux/books/booksSlice';
 
 export default function Books() {
+  const dispatch = useDispatch();
+  const books = useSelector((state) => state.books.books);
+
+  const handleAddBook = (title, author) => {
+    const newItemId = `item${Math.random().toString(36).substr(2, 9)}`;
+
+    dispatch(addBook({
+      item_id: newItemId,
+      title,
+      author,
+      catagory: 'Fiction',
+    }));
+  };
+
+  const handleRemoveBook = (itemId) => {
+    dispatch(removeBook(itemId));
+  };
+
   return (
     <div className="bookcard-container">
-      <Book genres="Action" title="The Hunger Games" author="Suzanne Collins" circle="circle" itemLayer="item layer-1" filldata="fill" percentage="64%" chapter="Chapter 17" />
-      <Book genres="Science Fiction" title="Dune" author="Frank Herbert" circle="circle" itemLayer="item itm-lay-1" filldata="fill-1" percentage="8%" chapter="Chapter 3" />
-      <Book genres="Economy" title="Capital in the Twenty-First Century" author="Suzanne Collins" circle="circ" itemLayer="ite" filldata="fil" percentage="0%" chapter="Introduction" />
+      {books.map((book) => (
+        <Book
+          key={book.item_id}
+          genres={book.catagory}
+          title={book.title}
+          author={book.author}
+          onRemove={() => handleRemoveBook(book.item_id)}
+        />
+      ))}
       <hr className="hr-line" />
-      <AddBook />
+      <AddBook onAddBook={handleAddBook} />
     </div>
   );
 }
