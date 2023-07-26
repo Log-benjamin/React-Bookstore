@@ -171,6 +171,14 @@ a {
   outline: none;
 }
 
+.remove-btn:hover {
+  margin-top: 10px;
+  margin-right: 15px;
+  height: 40px;
+  color: white;
+  background-color: #4386bf;
+}
+
 .stat-section {
   display: flex;
   margin-top: 2.5rem;
