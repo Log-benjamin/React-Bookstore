@@ -1,29 +1,31 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from './Button';
-import { addBook } from '../redux/books/booksSlice';
+import { addBookAsync } from '../redux/books/booksSlice';
 
 const AddBook = () => {
   const dispatch = useDispatch();
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
-  const [catagory, setCatagory] = useState('');
+  const [category, setCategory] = useState('');
 
-  const handleAddBook = () => {
+  const handleAddBook = (e) => {
+    e.preventDefault();
     const newItemId = `item${Math.random().toString(30).substr(2, 7)}`;
 
-    dispatch(addBook({
-      item_id: newItemId,
-      title,
-      author,
-      catagory,
-    }));
+    if (title && author) {
+      dispatch(addBookAsync({
+        item_id: newItemId,
+        title,
+        author,
+        category,
+      }));
 
-    setTitle('');
-    setAuthor('');
-    setCatagory('');
+      setTitle('');
+      setAuthor('');
+      setCategory('');
+    }
   };
-
   return (
     <form>
       <h4>ADD NEW BOOK</h4>
@@ -36,10 +38,10 @@ const AddBook = () => {
         required
       />
       <input
-        className="catagory-inp"
+        className="category-inp"
         type="text"
-        value={catagory}
-        onChange={(e) => setCatagory(e.target.value)}
+        value={category}
+        onChange={(e) => setCategory(e.target.value)}
         placeholder="Category"
         required
       />
