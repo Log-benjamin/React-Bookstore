@@ -13,13 +13,13 @@ export default function Books() {
   }, [dispatch]);
 
   if (isLoading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Loading...</div>;
   }
 
   if (error) {
     return (
       <div>
-        There is an issue:
+        There is an Error:
         {error}
       </div>
     );
