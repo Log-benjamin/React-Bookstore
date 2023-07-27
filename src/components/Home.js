@@ -1,40 +1,43 @@
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import AddBook from './AddBook';
 import Book from './Books';
-import { addBook, removeBook } from '../redux/books/booksSlice';
+import { fetchBooks } from '../redux/books/booksSlice';
 
 export default function Books() {
   const dispatch = useDispatch();
-  const books = useSelector((state) => state.books.books);
+  const { books, isLoading, error } = useSelector((state) => state.books);
 
-  const handleAddBook = (title, author) => {
-    const newItemId = `item${Math.random().toString(36).substr(2, 9)}`;
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, [dispatch]);
 
-    dispatch(addBook({
-      item_id: newItemId,
-      title,
-      author,
-      catagory: 'Fiction',
-    }));
-  };
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
 
-  const handleRemoveBook = (itemId) => {
-    dispatch(removeBook(itemId));
-  };
+  if (error) {
+    return (
+      <div>
+        There is an issue:
+        {error}
+      </div>
+    );
+  }
 
   return (
     <div className="bookcard-container">
-      {books.map((book) => (
+      {Object.entries(books).map(([itemId, book]) => (
         <Book
-          key={book.item_id}
-          genres={book.catagory}
-          title={book.title}
-          author={book.author}
-          onRemove={() => handleRemoveBook(book.item_id)}
+          key={itemId}
+          genres={book[0].category}
+          title={book[0].title}
+          author={book[0].author}
+          itemId={itemId}
         />
       ))}
       <hr className="hr-line" />
-      <AddBook onAddBook={handleAddBook} />
+      <AddBook />
     </div>
   );
 }
